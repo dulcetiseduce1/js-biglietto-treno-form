@@ -1,0 +1,18 @@
+main{
+    background: #b91450;
+    min-height: 100vh;
+}
+
+h1{
+    color: white;
+}
+
+.container{
+    background: white;
+    border-radius: 20px;
+}
+
+.container-biglietto{
+    background: white;
+    border-radius: 20px;
+}

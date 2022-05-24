@@ -4,15 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css'
+        integrity='sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg=='
+        crossorigin='anonymous' />
     <link rel="stylesheet" href="css/style.css">
-    <title>BigliettoFormJS</title>
+    <title>BigliettoJS</title>
 </head>
+
 <body>
-    <header></header>
-    <main>
+    <main class="text-center pt-4">
         <div id="outputHTML"></div>
-        <script src="js/main.js"></script>
+    <!-- input -->
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="container">
+            <form class="row p-4">
+                <div class="col col-4">
+                    <label for="nomeUtente" class="mb-3">Nome Cognome</label>
+                            <input class="rounded " type="text" placeholder="Nome" name="nomeUtente">
+                </div>
+                <div class="col col-4">
+                    <label for="kmUtente" class="mb-3">Km da percorrere</label>
+                            <input class="rounded" type="number" placeholder="Km" name="kmUtente">
+                </div>
+                <div class="col col-4">
+                    <label for="etaUtente" class="mb-3">Fascia d'età</label>
+                    <select class="rounded" name="etaUtente">
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="minorenne">Minorenne</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                </div>
+            </form>
+            <div class="text-center p-4">
+                <button id="genera-biglietto">Genera</button>
+                <button id="annulla-biglietto">Annulla</button>
+            </div>
+        </div>
+
+        <!-- output -->
+        <div id="container-biglietto" class="d-none">
+        <h1>IL TUO BIGLIETTO</h1>
+        <div class="container text-start p-3">
+            <h4>DETTAGLIO PASSEGGERI</h4>
+            <div class="row p-3">
+                <div class="col">
+                    <h4>NOME PASSEGGERO</h4>
+                    <h5 id="OutputNome"></h5>
+                </div>
+                <div class="col">
+                    <h5>Offerta</h5>
+                    <p id="OutputOfferta"></p>
+                </div>
+                <div class="col">
+                    <h5>Carrozza</h5>
+                    <p id="OutputCarrozza"></p>
+                </div>
+                <div class="col">
+                    <h5>Codice CP</h5>
+                    <p id="OutputCodice"></p>
+                </div>
+                <div class="col">
+                    <h5>Costo Biglietto</h5>
+                    <p><span id="OutputCosto"></span>€</p>
+                </div>
+            </div>
+        </div>
+    </div>
     </main>
-    <footer></footer>
-</body>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
+  
